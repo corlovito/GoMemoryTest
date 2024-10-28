@@ -7,6 +7,9 @@ WORKDIR /app
 # Скопировать все файлы в рабочую директорию
 COPY . .
 
+# Инициализация модуля Go
+RUN go mod init your-module-name
+
 # Собрать бинарный файл
 RUN go build -o main .
 
